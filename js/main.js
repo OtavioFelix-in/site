@@ -212,7 +212,7 @@
 
   // ---- Reveal on scroll ----
   var revealTargets = document.querySelectorAll(
-    ".section, .tl-item, .card, .contact-item, .stat, .about-facts li, .about-row .about-photo, .about-body, .about-banner, .about-portrait, .about-intro-text, .skill-group"
+    ".section, .tl-item, .card, .contact-item, .stat, .about-facts li, .about-body, .about-portrait, .about-intro-text, .skill-group"
   );
   revealTargets.forEach(function (el) {
     el.classList.add("reveal");
@@ -225,22 +225,13 @@
     if (idx) el.style.setProperty("--d", idx * 90 + "ms");
   });
   // entradas laterais na seção Sobre
-  [".about-portrait", ".about-row .about-photo"].forEach(function (sel) {
+  [".about-portrait"].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.classList.add("reveal-left"); });
   });
-  [".about-intro-text", ".about-body"].forEach(function (sel) {
+  [".about-intro-text"].forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.classList.add("reveal-right"); });
   });
 
-  // linha invertida (foto à direita): as entradas laterais também se invertem
-  document.querySelectorAll(".about-row-rev .about-photo").forEach(function (el) {
-    el.classList.remove("reveal-left");
-    el.classList.add("reveal-right");
-  });
-  document.querySelectorAll(".about-row-rev .about-body").forEach(function (el) {
-    el.classList.remove("reveal-right");
-    el.classList.add("reveal-left");
-  });
 
   // ---- Contadores que sobem até o valor ----
   function countUp(el) {
