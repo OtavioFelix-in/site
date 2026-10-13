@@ -444,7 +444,8 @@ img { max-width: 100%; }
   pointer-events: none;
 }
 [data-theme="light"] .about-photo-frame::after { opacity: 0.55; }
-.about-photo img {
+.about-photo img,
+.about-banner img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -452,7 +453,8 @@ img { max-width: 100%; }
   display: block;
   filter: grayscale(1) contrast(1.12) brightness(0.85);
 }
-[data-theme="light"] .about-photo img { filter: grayscale(1) contrast(1.08) brightness(1.02); }
+[data-theme="light"] .about-photo img,
+[data-theme="light"] .about-banner img { filter: grayscale(1) contrast(1.08) brightness(1.02); }
 .about-photo figcaption {
   margin-top: 12px;
   padding-left: 16px;
@@ -919,7 +921,7 @@ a.card { text-decoration: none; color: inherit; }
 }
 .stat-num[data-prefix]::before { content: attr(data-prefix); }
 .stat-num[data-suffix]::after { content: attr(data-suffix); }
-.stat-label { color: var(--text-dim); font-size: 0.88rem; }
+.stat-label { color: var(--text-dim); font-size: 0.88rem; text-wrap: balance; }
 
 .about .about-facts {
   display: grid;
@@ -947,7 +949,7 @@ a.card { text-decoration: none; color: inherit; }
 .about-row .about-photo { margin: 0; max-width: none; }
 .about-body { color: var(--text-dim); font-size: 1.05rem; margin: 0; }
 .about-banner { margin: 0; position: relative; }
-.about-banner .about-photo-frame img { aspect-ratio: 21 / 9; object-position: 50% 40%; width: 100%; }
+.about-banner .about-photo-frame img { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 42%; width: 100%; }
 .about-banner figcaption {
   margin-top: 14px; padding-left: 16px; border-left: 2px solid var(--accent); max-width: 640px;
 }
