@@ -564,6 +564,7 @@ img { max-width: 100%; }
   background: var(--bg);
   border: 2px solid var(--work);
 }
+.tl-work .tl-dot { background: var(--work); }
 .tl-personal .tl-dot { border-color: var(--personal); }
 .tl-content {
   display: grid;
@@ -641,6 +642,14 @@ a.card { text-decoration: none; color: inherit; }
   font-weight: 600;
   font-size: 0.88rem;
 }
+.card-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: auto; }
+.card-links .card-link { margin-top: 0; }
+.card-note {
+  margin-top: auto;
+  color: var(--text-dimmer);
+  font-size: 0.85rem;
+  font-style: italic;
+}
 .card-link[aria-disabled="true"] {
   color: var(--text-dimmer);
   pointer-events: none;
@@ -686,6 +695,12 @@ a.card { text-decoration: none; color: inherit; }
   border-radius: 50%;
   background: var(--accent);
   border: 1.5px solid var(--bg);
+}
+.chip-cert small {
+  margin-left: 8px;
+  color: var(--text-dimmer);
+  font-size: 0.72rem;
+  font-weight: 500;
 }
 .chip-cert:hover { border-color: var(--accent-dim); color: var(--accent); }
 .chips-db .chip-cert::after { background: var(--db); }
@@ -806,21 +821,7 @@ a.card { text-decoration: none; color: inherit; }
   left: -140px; top: 8%;
   border-radius: 50%;
   background: radial-gradient(circle, var(--accent-soft), transparent 68%);
-  animation: drift 16s ease-in-out infinite alternate;
   pointer-events: none;
-}
-@keyframes drift {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(180px, 60px) scale(1.25); }
-}
-.hero-photo, .about-portrait { animation: float 6s ease-in-out infinite, ringPulse 3.6s ease-out infinite; }
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-@keyframes ringPulse {
-  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent); }
-  70%, 100% { box-shadow: 0 0 0 20px transparent; }
 }
 .hero-text > * { animation: rise 0.8s cubic-bezier(.2,.7,.2,1) both; }
 .hero-text > :nth-child(1) { animation-delay: .15s; }
@@ -916,6 +917,8 @@ a.card { text-decoration: none; color: inherit; }
   line-height: 1.1;
   color: var(--accent);
 }
+.stat-num[data-prefix]::before { content: attr(data-prefix); }
+.stat-num[data-suffix]::after { content: attr(data-suffix); }
 .stat-label { color: var(--text-dim); font-size: 0.88rem; }
 
 .about .about-facts {
@@ -950,9 +953,6 @@ a.card { text-decoration: none; color: inherit; }
 }
 .about-banner cite { display: block; margin-top: 6px; font-style: normal; font-size: 0.82rem; color: var(--text-dimmer); }
 
-/* Fotos respirando devagar, em loop */
-.about-photo-frame img { animation: kenburns 18s ease-in-out infinite alternate; }
-@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.08); } }
 
 /* Entradas laterais não podem gerar rolagem horizontal */
 main { overflow-x: clip; }
@@ -1018,8 +1018,8 @@ main { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .scroll-cue, .hero::before, .hero-photo, .about-portrait, .hero-text > *,
-  .cursor-blink, .pulse-dot, .marquee-track, .about-photo-frame img { animation: none; }
+  .scroll-cue, .hero-text > *,
+  .cursor-blink, .pulse-dot, .marquee-track { animation: none; }
   .section-title::after { transition: none; transform: scaleX(1); }
   .section-eyebrow::after { transition: none; width: 36px; }
 }

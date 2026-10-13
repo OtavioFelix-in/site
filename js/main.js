@@ -111,6 +111,15 @@
         }
       }
     });
+    document.querySelectorAll("[data-en-content]").forEach(function (el) {
+      if (!el.hasAttribute("data-pt-content")) {
+        el.setAttribute("data-pt-content", el.getAttribute("content"));
+      }
+      el.setAttribute(
+        "content",
+        lang === "en" ? el.getAttribute("data-en-content") : el.getAttribute("data-pt-content")
+      );
+    });
     document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
     if (langLabel) {
       langLabel.textContent = lang === "en" ? "PT" : "EN";
@@ -178,6 +187,22 @@
       box.replaceChildren(iframe);
     });
   });
+
+  // ---- Telefone: só aparece no clique (evita raspagem por robôs de spam) ----
+  var phone = document.getElementById("phone-reveal");
+  if (phone) {
+    phone.addEventListener("click", function (e) {
+      if (phone.getAttribute("href") !== "#") return;
+      e.preventDefault();
+      var n = atob(phone.getAttribute("data-n"));
+      var label = phone.querySelector("span");
+      label.removeAttribute("data-en");
+      label.removeAttribute("data-pt");
+      label.textContent = "(" + n.slice(2, 4) + ") " + n.slice(4, 9) + "-" + n.slice(9);
+      phone.setAttribute("href", "tel:+" + n);
+      phone.removeAttribute("role");
+    });
+  }
 
   // ---- Ano no rodapé ----
   var yearEl = document.getElementById("year");
