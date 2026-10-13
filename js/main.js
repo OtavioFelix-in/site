@@ -232,6 +232,16 @@
     document.querySelectorAll(sel).forEach(function (el) { el.classList.add("reveal-right"); });
   });
 
+  // linha invertida (foto à direita): as entradas laterais também se invertem
+  document.querySelectorAll(".about-row-rev .about-photo").forEach(function (el) {
+    el.classList.remove("reveal-left");
+    el.classList.add("reveal-right");
+  });
+  document.querySelectorAll(".about-row-rev .about-body").forEach(function (el) {
+    el.classList.remove("reveal-right");
+    el.classList.add("reveal-left");
+  });
+
   // ---- Contadores que sobem até o valor ----
   function countUp(el) {
     if (el.getAttribute("data-done")) return;

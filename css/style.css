@@ -444,8 +444,7 @@ img { max-width: 100%; }
   pointer-events: none;
 }
 [data-theme="light"] .about-photo-frame::after { opacity: 0.55; }
-.about-photo img,
-.about-banner img {
+.about-photo img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -453,8 +452,7 @@ img { max-width: 100%; }
   display: block;
   filter: grayscale(1) contrast(1.12) brightness(0.85);
 }
-[data-theme="light"] .about-photo img,
-[data-theme="light"] .about-banner img { filter: grayscale(1) contrast(1.08) brightness(1.02); }
+[data-theme="light"] .about-photo img { filter: grayscale(1) contrast(1.08) brightness(1.02); }
 .about-photo figcaption {
   margin-top: 12px;
   padding-left: 16px;
@@ -948,12 +946,11 @@ a.card { text-decoration: none; color: inherit; }
 }
 .about-row .about-photo { margin: 0; max-width: none; }
 .about-body { color: var(--text-dim); font-size: 1.05rem; margin: 0; }
-.about-banner { margin: 0; position: relative; }
-.about-banner .about-photo-frame img { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 42%; width: 100%; }
-.about-banner figcaption {
-  margin-top: 14px; padding-left: 16px; border-left: 2px solid var(--accent); max-width: 640px;
-}
-.about-banner cite { display: block; margin-top: 6px; font-style: normal; font-size: 0.82rem; color: var(--text-dimmer); }
+/* Fotos verticais: mostradas na proporção vertical (recortar em faixa larga ampliava e borrava) */
+.about-row .about-photo img { aspect-ratio: 4 / 5; object-position: 50% 38%; }
+.about-row-rev { grid-template-columns: 1fr minmax(260px, 420px); }
+.about-row-rev .about-photo { order: 2; }
+.about-row-rev .about-photo img { object-position: 50% 48%; }
 
 
 /* Entradas laterais não podem gerar rolagem horizontal */
@@ -992,7 +989,8 @@ main { overflow-x: clip; }
   .stat { padding: 18px 8px; }
   .about .about-facts { grid-template-columns: 1fr; }
   .about-story { gap: 40px; }
-  .about-banner .about-photo-frame img { aspect-ratio: 4 / 3; }
+  .about-row-rev { grid-template-columns: 1fr; }
+  .about-row-rev .about-photo { order: 0; }
   .hero::before { display: none; }
   .section { padding: 80px 20px; }
   .tl-content { grid-template-columns: 1fr; gap: 6px; }
