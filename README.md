@@ -4,6 +4,10 @@
 
 <br>
 
+**Português** &nbsp;·&nbsp; [English](README.en.md)
+
+<br>
+
 # site-pessoal
 
 **Portfólio e currículo vivo de Otávio Felix da Silva.**<br>HTML, CSS e JavaScript puros. Sem framework, sem build.
