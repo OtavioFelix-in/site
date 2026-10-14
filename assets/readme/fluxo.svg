@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-labelledby="t d" xml:lang="pt-BR">
+  <title id="t">Do código ao ar</title>
+  <desc id="d">Quatro etapas em sequência: editar HTML, CSS e JavaScript puros; conferir contraste AA e telas de 360 a 1280 pixels; git push na branch main; e o site no ar pelo GitHub Pages em cerca de um minuto.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3e7d5"/>
+      <stop offset="1" stop-color="#e8d3b6"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    .rail{stroke:#b9a088;stroke-width:4;stroke-linecap:round;stroke-dasharray:2 14;animation:flow 1.2s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-16}}
+    .card{fill:#fffaf2;stroke:#cdb79b;stroke-width:3;animation:lit 8s infinite}
+    @keyframes lit{0%,100%{stroke:#cdb79b;fill:#fffaf2}3%,20%{stroke:#9a5b28;fill:#ffffff}24%{stroke:#cdb79b;fill:#fffaf2}}
+    .n1 .card{animation-delay:0s}.n2 .card{animation-delay:2s}.n3 .card{animation-delay:4s}.n4 .card{animation-delay:6s}
+    .head{font-family:Georgia,"Times New Roman",serif}
+    .ttl.mono{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,"Liberation Mono",monospace;font-size:27px}
+    .num{font-size:19px;font-weight:800;fill:#9a5b28;text-anchor:middle}
+    .ttl{font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:700;fill:#3a2a20;text-anchor:middle}
+    .sub{font-size:16px;fill:#6b5d4d;text-anchor:middle}
+    .in{animation:rise .8s ease-out both}
+    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.dot{display:none}}
+  </style>
+
+  <rect width="1280" height="340" rx="28" fill="url(#bg)"/>
+  <text class="in head" x="640" y="58" text-anchor="middle" font-size="32" font-weight="700" fill="#3a2a20">Do código ao ar</text>
+
+  <path id="trilho" d="M190 180 H1090" class="rail" fill="none"/>
+  <g class="dot">
+    <circle r="9" fill="#9a5b28">
+      <animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.75;1"><mpath href="#trilho"/></animateMotion>
+    </circle>
+    <circle r="20" fill="#9a5b28" opacity=".22">
+      <animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.75;1"><mpath href="#trilho"/></animateMotion>
+    </circle>
+  </g>
+
+  <g class="n1" transform="translate(190 180)">
+    <rect class="card" x="-110" y="-66" width="220" height="132" rx="20"/>
+    <text class="num" y="-32">1</text>
+    <text class="ttl" y="8">Editar</text>
+    <text class="sub" y="38">HTML, CSS e JS puros</text>
+  </g>
+  <g class="n2" transform="translate(490 180)">
+    <rect class="card" x="-110" y="-66" width="220" height="132" rx="20"/>
+    <text class="num" y="-32">2</text>
+    <text class="ttl" y="8">Conferir</text>
+    <text class="sub" y="38">contraste AA, 360–1280 px</text>
+  </g>
+  <g class="n3" transform="translate(790 180)">
+    <rect class="card" x="-110" y="-66" width="220" height="132" rx="20"/>
+    <text class="num" y="-32">3</text>
+    <text class="ttl mono" y="8">git push</text>
+    <text class="sub" y="38">branch main</text>
+  </g>
+  <g class="n4" transform="translate(1090 180)">
+    <rect class="card" x="-110" y="-66" width="220" height="132" rx="20"/>
+    <text class="num" y="-32">4</text>
+    <text class="ttl" y="8">No ar</text>
+    <text class="sub" y="38">GitHub Pages, ~1 min</text>
+  </g>
+
+  <text class="in" x="640" y="304" text-anchor="middle" font-size="18" fill="#6b5d4d" style="animation-delay:.6s">Sem build e sem dependências: o que está no repositório é o que vai para o ar.</text>
+</svg>

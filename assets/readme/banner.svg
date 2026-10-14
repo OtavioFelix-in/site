@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" role="img" aria-labelledby="t d" xml:lang="pt-BR">
+  <title id="t">Otávio Felix da Silva · Desenvolvedor Full Stack</title>
+  <desc id="d">Otávio Felix da Silva, Desenvolvedor Full Stack. Banco de Dados, Análise de Sistemas e Automação. PHP, Oracle, SQL e JavaScript. Ao lado, um trecho de SQL sendo digitado: dados viram decisão.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3e7d5"/>
+      <stop offset="1" stop-color="#e8d3b6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff6e6" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#fff6e6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#b07a4a" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#b07a4a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#5a3719" flood-opacity=".36"/>
+    </filter>
+  </defs>
+  <style>
+    text{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    .serif{font-family:Georgia,"Times New Roman",serif}
+    .mono text,.mono{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,"Liberation Mono",monospace}
+    .in{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .halo{animation:halo 7s ease-in-out infinite}
+    @keyframes halo{0%,100%{opacity:.75}50%{opacity:1}}
+    .float{animation:float 5s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    .code{animation:codefade 10s linear infinite}
+    @keyframes codefade{0%,91%{opacity:1}96%,99%{opacity:0}100%{opacity:1}}
+    .cv{transform-box:fill-box;transform-origin:right center;transform:scaleX(0);animation:none 10s linear infinite}
+    @keyframes cv0{0%,13.00%{transform:scaleX(1)}22.50%,95.9%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}@keyframes cv1{0%,23.50%{transform:scaleX(1)}33.00%,95.9%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}@keyframes cv2{0%,34.00%{transform:scaleX(1)}43.50%,95.9%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}@keyframes cv3{0%,44.50%{transform:scaleX(1)}54.00%,95.9%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}@keyframes cv4{0%,55.00%{transform:scaleX(1)}64.50%,95.9%{transform:scaleX(0)}96%,100%{transform:scaleX(1)}}
+    .curwrap{opacity:0;animation:curwin 10s linear infinite}
+    @keyframes curwin{0%,66%{opacity:0}67%,90%{opacity:1}91%,100%{opacity:0}}
+    .cur{animation:cur 1s steps(1) infinite}
+    @keyframes cur{0%,49%{opacity:1}50%,100%{opacity:0}}
+    .motto{animation:rise 1.2s ease-out .4s both}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <ellipse class="halo" cx="1330" cy="40" rx="620" ry="300" fill="url(#glow)"/>
+  <ellipse cx="1584" cy="430" rx="520" ry="200" fill="url(#warm)"/>
+
+  <g class="motto" fill="#8a6d55">
+    <text x="1414" y="39" text-anchor="end" font-size="12" letter-spacing="4">SONHE · PLANEJE · CONQUISTE</text>
+    <rect x="1434" y="34" width="90" height="1" fill="#b9a088"/>
+  </g>
+
+  <g class="in" style="animation-delay:.1s"><text class="serif" x="150" y="148" font-size="58" letter-spacing="-.5" fill="#3a2a20">Desenvolvedor <tspan fill="#9a6a3e" font-style="italic">Full Stack</tspan></text></g>
+  <rect class="in" style="animation-delay:.35s" x="150" y="178" width="64" height="3" rx="1.5" fill="#b07a4a"/>
+  <g class="in" style="animation-delay:.55s"><text x="150" y="222" font-size="23" letter-spacing=".4" fill="#5b4535" xml:space="preserve">Banco de Dados  ·  Análise de Sistemas  ·  Automação</text></g>
+  <g class="in" style="animation-delay:0.95s"><rect x="150" y="252" width="68" height="38" rx="19" fill="#fff8ec" fill-opacity=".62" stroke="#5a3c28" stroke-opacity=".4"/><text x="184.0" y="276" text-anchor="middle" font-size="17" font-weight="600" fill="#4a3426">PHP</text></g><g class="in" style="animation-delay:1.05s"><rect x="228" y="252" width="86" height="38" rx="19" fill="#fff8ec" fill-opacity=".62" stroke="#5a3c28" stroke-opacity=".4"/><text x="271.0" y="276" text-anchor="middle" font-size="17" font-weight="600" fill="#4a3426">Oracle</text></g><g class="in" style="animation-delay:1.15s"><rect x="324" y="252" width="66" height="38" rx="19" fill="#fff8ec" fill-opacity=".62" stroke="#5a3c28" stroke-opacity=".4"/><text x="357.0" y="276" text-anchor="middle" font-size="17" font-weight="600" fill="#4a3426">SQL</text></g><g class="in" style="animation-delay:1.25s"><rect x="400" y="252" width="112" height="38" rx="19" fill="#fff8ec" fill-opacity=".62" stroke="#5a3c28" stroke-opacity=".4"/><text x="456.0" y="276" text-anchor="middle" font-size="17" font-weight="600" fill="#4a3426">JavaScript</text></g>
+
+  <g class="float">
+    <g filter="url(#sh)"><rect x="1104" y="84" width="330" height="182" rx="12" fill="#2b2019"/></g>
+    <circle cx="1129" cy="107" r="5" fill="#5a4638"/><circle cx="1145" cy="107" r="5" fill="#5a4638"/><circle cx="1161" cy="107" r="5" fill="#5a4638"/>
+    <g class="code mono">
+      <text x="1124" y="141" font-size="15" textLength="198.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#8a7461" xml:space="preserve">-- dados viram decisão</tspan></text>
+      <text x="1124" y="166" font-size="15" textLength="234.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#e0a36a" xml:space="preserve">SELECT</tspan><tspan fill="#c9b6a3" xml:space="preserve"> cliente, </tspan><tspan fill="#d9c19a" xml:space="preserve">SUM</tspan><tspan fill="#c9b6a3" xml:space="preserve">(valor)</tspan></text>
+      <text x="1124" y="191" font-size="15" textLength="108.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#e0a36a" xml:space="preserve">FROM</tspan><tspan fill="#c9b6a3" xml:space="preserve">  vendas</tspan></text>
+      <text x="1124" y="215" font-size="15" textLength="144.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#e0a36a" xml:space="preserve">WHERE</tspan><tspan fill="#c9b6a3" xml:space="preserve"> ano = </tspan><tspan fill="#a8bf8a" xml:space="preserve">2026</tspan></text>
+      <text x="1124" y="240" font-size="15" textLength="153.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#e0a36a" xml:space="preserve">GROUP BY</tspan><tspan fill="#c9b6a3" xml:space="preserve"> cliente;</tspan></text>
+      <rect class="cv" style="animation-name:cv0" x="1122" y="126" width="206.0" height="21" fill="#2b2019"/>
+      <rect class="cv" style="animation-name:cv1" x="1122" y="151" width="242.0" height="21" fill="#2b2019"/>
+      <rect class="cv" style="animation-name:cv2" x="1122" y="176" width="116.0" height="21" fill="#2b2019"/>
+      <rect class="cv" style="animation-name:cv3" x="1122" y="200" width="152.0" height="21" fill="#2b2019"/>
+      <rect class="cv" style="animation-name:cv4" x="1122" y="225" width="161.0" height="21" fill="#2b2019"/>
+      <g class="curwrap"><rect class="cur" x="1279.0" y="229" width="8" height="15" fill="#e0a36a"/></g>
+    </g>
+  </g>
+</svg>

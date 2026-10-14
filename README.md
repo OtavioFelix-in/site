@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="assets/readme/banner.png" alt="Otávio Felix da Silva — Desenvolvedor Full Stack. Banco de Dados, Análise de Sistemas e Automação. PHP, Oracle, SQL e JavaScript." width="100%">
+<img src="assets/readme/banner.svg" alt="Otávio Felix da Silva — Desenvolvedor Full Stack. Banco de Dados, Análise de Sistemas e Automação. PHP, Oracle, SQL e JavaScript." width="100%">
 
 <br>
 
 **Português** &nbsp;·&nbsp; [English](README.en.md)
 
 <br>
+
+<img src="assets/logo-ofs.svg" alt="Assinatura OFS" width="84">
 
 # site-pessoal
 
@@ -106,6 +108,10 @@ Abrir o `index.html` direto no navegador também funciona; a única diferença �
 ## Publicação
 
 O site é servido pelo **GitHub Pages** a partir da branch `main`. Um `git push` publica em cerca de um minuto.
+
+<p align="center">
+  <img src="assets/readme/fluxo.svg" alt="Do código ao ar: editar, conferir, git push e no ar pelo GitHub Pages em cerca de um minuto" width="100%">
+</p>
 
 <br>
 

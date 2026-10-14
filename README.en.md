@@ -1,12 +1,14 @@
 <div align="center">
 
-<img src="assets/readme/banner-en.png" alt="Otávio Felix da Silva — Full Stack Developer. Databases, Systems Analysis and Automation. PHP, Oracle, SQL and JavaScript." width="100%">
+<img src="assets/readme/banner-en.svg" alt="Otávio Felix da Silva — Full Stack Developer. Databases, Systems Analysis and Automation. PHP, Oracle, SQL and JavaScript." width="100%">
 
 <br>
 
 [Português](README.md) &nbsp;·&nbsp; **English**
 
 <br>
+
+<img src="assets/logo-ofs.svg" alt="OFS signature" width="84">
 
 # site-pessoal
 
@@ -108,6 +110,10 @@ Opening `index.html` straight in the browser also works; the only difference is 
 ## Publishing
 
 The site is served by **GitHub Pages** from the `main` branch. A `git push` publishes it in about a minute.
+
+<p align="center">
+  <img src="assets/readme/fluxo-en.svg" alt="From code to live: edit, check, git push and live on GitHub Pages in about a minute" width="100%">
+</p>
 
 <br>
 
