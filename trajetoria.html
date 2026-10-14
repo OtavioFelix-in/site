@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110d" media="(prefers-color-scheme: dark)">
 <title data-en="Journey — Otávio Felix da Silva">Trajetória — Otávio Felix da Silva</title>
 <meta name="description" content="Linha do tempo de Otávio Felix da Silva, de 2022 até hoje: marcos profissionais e pessoais." data-en-content="Timeline of Otávio Felix da Silva, from 2022 to today: professional and personal milestones.">
 <!-- Open Graph / preview ao colar o link (URLs absolutas: exigência do LinkedIn/WhatsApp) -->
@@ -32,7 +35,7 @@
     <nav class="nav-links" id="nav-links">
       <a href="index.html" data-en="Home">Início</a>
       <a href="sobre.html" data-en="About">Sobre</a>
-      <a href="trajetoria.html" class="active" data-en="Journey">Trajetória</a>
+      <a href="trajetoria.html" class="active" aria-current="page" data-en="Journey">Trajetória</a>
       <a href="projetos.html" data-en="Projects">Projetos</a>
       <a href="skills.html" data-en="Qualifications">Qualificações</a>
       <a href="contato.html" data-en="Contact">Contato</a>
@@ -54,14 +57,15 @@
 
   <section class="section section-first" id="trajetoria">
     <p class="section-eyebrow" data-num="02" data-en="Journey">Trajetória</p>
-    <h2 class="section-title" data-en="From 2022 to today">De 2022 até hoje</h2>
+    <h1 class="section-title" data-en="From 2022 to today">De 2022 até hoje</h1>
     <p class="section-lead" data-en="Professional and personal, on the same timeline — because that's how it happened.">
       Profissional e pessoal, na mesma linha do tempo — porque foi assim que aconteceu.
     </p>
 
-    <div class="tl-legend">
-      <span class="tl-legend-item"><i class="tl-legend-dot tl-legend-dot-work"></i><span data-en="Professional">Profissional</span></span>
-      <span class="tl-legend-item"><i class="tl-legend-dot tl-legend-dot-personal"></i><span data-en="Personal">Pessoal</span></span>
+    <div class="tl-filter" role="group" aria-label="Filtrar a linha do tempo">
+      <button type="button" class="tl-filter-btn is-active" data-filter="all" aria-pressed="true"><span data-en="All">Tudo</span></button>
+      <button type="button" class="tl-filter-btn" data-filter="tl-work" aria-pressed="false"><i class="tl-legend-dot tl-legend-dot-work"></i><span data-en="Professional">Profissional</span></button>
+      <button type="button" class="tl-filter-btn" data-filter="tl-personal" aria-pressed="false"><i class="tl-legend-dot tl-legend-dot-personal"></i><span data-en="Personal">Pessoal</span></button>
     </div>
 
     <ol class="timeline">
@@ -163,6 +167,7 @@
 
 <footer class="footer">
   <p>Otávio Felix da Silva · Paulínia, SP · <span id="year"></span></p>
+  <p class="footer-links"><a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener">GitHub</a><a href="contato.html" data-en="Contact">Contato</a></p>
 </footer>
 
 <script src="js/main.js"></script>

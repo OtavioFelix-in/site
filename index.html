@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110d" media="(prefers-color-scheme: dark)">
 <title data-en="Otávio Felix da Silva — Full-Stack Developer">Otávio Felix da Silva — Desenvolvedor Full-Stack</title>
 <meta name="description" content="Otávio Felix da Silva — Desenvolvedor Full-Stack, Banco de Dados e Automação. PL/SQL, SQL, PHP, Python, JavaScript. Estudante de Sistemas de Informação." data-en-content="Otávio Felix da Silva — Full-Stack Developer, Databases and Automation. PL/SQL, SQL, PHP, Python, JavaScript. Information Systems student.">
 <!-- Open Graph / preview ao colar o link (URLs absolutas: exigência do LinkedIn/WhatsApp) -->
@@ -21,6 +24,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Otávio Felix da Silva","jobTitle":"Estagiário de Desenvolvimento","worksFor":{"@type":"Organization","name":"AgRoss"},"alumniOf":{"@type":"CollegeOrUniversity","name":"PUC-Campinas"},"address":{"@type":"PostalAddress","addressLocality":"Paulínia","addressRegion":"SP","addressCountry":"BR"},"url":"https://otaviofelix-in.github.io/site-pessoal/","sameAs":["https://www.linkedin.com/in/otaviofelix","https://github.com/OtavioFelix-in"],"knowsAbout":["PL/SQL","Oracle","SQL","PHP","JavaScript","Python","Java","Node.js"]}
+</script>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,7 +38,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="Otávio Felix — início">ofs<span class="dot">.</span></a>
     <nav class="nav-links" id="nav-links">
-      <a href="index.html" class="active" data-en="Home">Início</a>
+      <a href="index.html" class="active" aria-current="page" data-en="Home">Início</a>
       <a href="sobre.html" data-en="About">Sobre</a>
       <a href="trajetoria.html" data-en="Journey">Trajetória</a>
       <a href="projetos.html" data-en="Projects">Projetos</a>
@@ -56,33 +62,6 @@
 
   <!-- HERO -->
   <section class="hero" id="topo">
-    <svg class="hero-art" viewBox="0 0 600 900" preserveAspectRatio="xMaxYMin slice" aria-hidden="true">
-      <defs>
-        <pattern id="hero-dots" width="22" height="22" patternUnits="userSpaceOnUse">
-          <circle cx="2" cy="2" r="1.1" fill="var(--text-dimmer)" opacity=".35"/>
-        </pattern>
-      </defs>
-      <rect width="600" height="900" fill="url(#hero-dots)"/>
-      <circle cx="560" cy="930" r="380" fill="none" stroke="var(--accent)" stroke-opacity=".35" stroke-width="1.5"/>
-      <circle cx="560" cy="930" r="270" fill="none" stroke="var(--border)" stroke-width="1.5"/>
-      <circle class="pulse-dot" cx="240" cy="725" r="6" fill="var(--accent)"/>
-      <line x1="36" y1="70" x2="36" y2="300" stroke="var(--accent)" stroke-width="2"/>
-      <g transform="translate(70 80)">
-        <rect width="470" height="250" rx="14" fill="var(--bg-elev)" stroke="var(--border)" stroke-width="1.5"/>
-        <line x1="0" y1="40" x2="470" y2="40" stroke="var(--border)" stroke-width="1.5"/>
-        <circle cx="24" cy="20" r="5.5" fill="var(--border)"/><circle cx="42" cy="20" r="5.5" fill="var(--border)"/><circle cx="60" cy="20" r="5.5" fill="var(--border)"/>
-        <text x="235" y="25" text-anchor="middle" font-family="ui-monospace, Consolas, monospace" font-size="14" fill="var(--text-dimmer)">futuro.js</text>
-        <g font-family="ui-monospace, Consolas, monospace" font-size="19">
-          <text x="28" y="86"><tspan fill="var(--accent)">const</tspan><tspan fill="var(--text)"> futuro = {</tspan></text>
-          <text x="56" y="120" fill="var(--text-dim)">aprendizado: <tspan fill="var(--accent)">true</tspan>,</text>
-          <text x="56" y="154" fill="var(--text-dim)">disciplina: <tspan fill="var(--accent)">true</tspan>,</text>
-          <text x="56" y="188" fill="var(--text-dim)">grandesProjetos: <tspan fill="var(--accent)">true</tspan>,</text>
-          <text x="28" y="222" fill="var(--text)">};</text>
-          <rect class="cursor-blink" x="56" y="207" width="10" height="20" fill="var(--accent)" opacity=".8"/>
-        </g>
-      </g>
-      <text x="70" y="850" font-family="ui-monospace, Consolas, monospace" font-size="14" letter-spacing="4" fill="var(--text-dimmer)">&lt;/&gt;  CÓDIGO · IDEIAS · PROJETOS</text>
-    </svg>
     <div class="hero-inner">
       <div class="hero-photo">
         <img src="assets/foto.jpg" alt="Foto de Otávio Felix da Silva" onerror="this.parentElement.classList.add('no-photo')">
@@ -99,74 +78,115 @@
         <div class="hero-actions">
           <a href="projetos.html" class="btn btn-primary" data-en="View projects">Ver projetos</a>
           <a href="contato.html" class="btn btn-ghost" data-en="Contact">Contato</a>
-          <a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.6v1.64h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.76V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-4V9Z"/></svg>
-          </a>
-          <a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener" class="btn btn-icon" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.93c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.95.68 1.92v2.85c0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-          </a>
+          <a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.6v1.64h.05c.5-.95 1.73-1.95 3.56-1.95 3.81 0 4.52 2.5 4.52 5.76V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21h-4V9Z"/></svg></a>
+          <a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener" class="btn btn-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5v-1.93c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.92-2.34 4.78-4.57 5.04.36.32.68.95.68 1.92v2.85c0 .28.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg></a>
         </div>
       </div>
     </div>
-    <a href="sobre.html" class="scroll-cue" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
-    </a>
+    <dl class="hero-facts">
+      <div><dt data-en="Now">Agora</dt><dd data-en="Development Intern — AgRoss">Estagiário de Desenvolvimento — AgRoss</dd></div>
+      <div><dt data-en="Studying">Estudando</dt><dd data-en="Information Systems — PUC-Campinas">Sistemas de Informação — PUC-Campinas</dd></div>
+      <div><dt data-en="Main stack">Stack principal</dt><dd>PL/SQL · Oracle · PHP · JavaScript</dd></div>
+    </dl>
   </section>
 
-  <!-- FAIXA DE TECNOLOGIAS -->
-  <div class="marquee" aria-label="Tecnologias que uso">
-    <div class="marquee-track"><span>PL/SQL</span><span>SQL</span><span>Oracle</span><span>PHP</span><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Git</span><span>Node.js</span><span>Java</span><span>Automação</span><span>Banco de dados</span></div>
-    <div class="marquee-track" aria-hidden="true"><span>PL/SQL</span><span>SQL</span><span>Oracle</span><span>PHP</span><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Git</span><span>Node.js</span><span>Java</span><span>Automação</span><span>Banco de dados</span></div>
-  </div>
+  <!-- PROJETOS EM DESTAQUE -->
+  <section class="section" id="projetos-destaque">
+    <p class="section-eyebrow" data-en="Projects">Projetos</p>
+    <h2 class="section-title" data-en="What I've been building">O que venho construindo</h2>
+    <div class="cards featured-grid">
+      <article class="card">
+        <div class="card-top">
+          <h3>Sistemas internos — AgRoss</h3>
+          <div class="card-tags chips-db"><span>PL/SQL</span><span>Oracle</span><span>SQL</span><span>JavaScript</span></div>
+        </div>
+        <p class="card-problem" data-en="Screens and routines on top of an Oracle database, plus AI in a self-service channel.">Telas e rotinas sobre banco Oracle e a introdução de IA em um canal de autoatendimento.</p>
+        <span class="card-note" data-en="Internal code — not public">Código interno — não é público</span>
+      </article>
+      <article class="card">
+        <div class="card-top">
+          <h3>Atendimentos de Pronto Socorro</h3>
+          <div class="card-tags"><span>Sistema web</span><span>MySQL</span><span>PUC-Campinas</span></div>
+        </div>
+        <p class="card-problem" data-en="Reception, triage by the Manchester Protocol and medical care, with profile-based login and a 5-table model.">Recepção, triagem pelo Protocolo de Manchester e atendimento médico, com login por perfil e modelo de 5 tabelas.</p>
+        <div class="card-links"><a href="https://github.com/OtavioFelix-in/Projeto-Integrador2" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a></div>
+      </article>
+      <article class="card">
+        <div class="card-top">
+          <h3>Meu Bolso</h3>
+          <div class="card-tags"><span>React Native</span><span>Expo</span><span>SQLite</span></div>
+        </div>
+        <p class="card-problem" data-en="Offline personal finance app: fixed bills, credit cards and monthly closing.">App de controle financeiro pessoal, 100% offline: contas fixas, cartões e fechamento de mês.</p>
+        <div class="card-links"><a href="https://github.com/OtavioFelix-in/MeuBolso" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a><a href="https://otaviofelix-in.github.io/MeuBolso-Site/" target="_blank" rel="noopener" class="card-link" data-en="Visit the site →">Ver o site →</a></div>
+      </article>
+    </div>
+    <p class="section-more"><a class="card-link" href="projetos.html" data-en="All projects →">Todos os projetos →</a></p>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <p class="section-eyebrow" data-en="Stack">Stack</p>
+    <h2 class="section-title" data-en="What I use">O que uso</h2>
+    <div class="skills-grid">
+      <div class="skill-group"><h3 data-en="Database">Banco de dados</h3><div class="chips chips-db"><span>PL/SQL</span><span>SQL</span><span>Oracle</span><span data-en="Data modeling">Modelagem de dados</span></div></div>
+      <div class="skill-group"><h3>Back-end</h3><div class="chips"><span>PHP</span><span>Node.js</span><span>Python</span><span>Java</span></div></div>
+      <div class="skill-group"><h3>Front-end</h3><div class="chips"><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+      <div class="skill-group"><h3 data-en="Tools & data">Ferramentas e dados</h3><div class="chips"><span>Git</span><span>Power BI</span></div></div>
+    </div>
+    <p class="section-more"><a class="card-link" href="skills.html" data-en="Qualifications and certificates →">Qualificações e certificados →</a></p>
+  </section>
 
   <!-- VÍDEO -->
   <section class="section section-video" id="video">
-    <p class="section-eyebrow" data-en="Watch">Assista</p>
-    <h2 class="section-title" data-en="30 seconds about me">30 segundos sobre mim</h2>
-    <div class="video-embed" data-yt="D_170oD0nEI">
-      <button type="button" class="video-play" aria-label="Reproduzir vídeo de apresentação">
-        <img src="assets/video-capa.jpg" alt="" loading="lazy" width="1280" height="720">
-        <span class="video-play-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </span>
-      </button>
-      <noscript>
-        <a href="https://www.youtube.com/watch?v=D_170oD0nEI" target="_blank" rel="noopener">Assistir no YouTube</a>
-      </noscript>
+    <div class="video-row">
+      <div class="video-copy">
+        <p class="section-eyebrow" data-en="Watch">Assista</p>
+        <h2 class="section-title" data-en="30 seconds about me">30 segundos sobre mim</h2>
+        <p class="section-note" data-en="Who I am, what I do and what I'm building.">Quem eu sou, o que faço e o que estou construindo.</p>
+      </div>
+      <div class="video-embed" data-yt="D_170oD0nEI">
+        <button type="button" class="video-play" aria-label="Reproduzir vídeo de apresentação">
+          <img src="assets/video-capa.jpg" alt="" loading="lazy" width="1280" height="720">
+          <span class="video-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        </button>
+        <noscript>
+          <a href="https://www.youtube.com/watch?v=D_170oD0nEI" target="_blank" rel="noopener">Assistir no YouTube</a>
+        </noscript>
+      </div>
     </div>
   </section>
 
-  <!-- EXPLORAR -->
-  <section class="section" id="explorar">
-    <p class="section-eyebrow" data-en="Explore">Explorar</p>
-    <h2 class="section-title" data-en="Where to look">Por onde começar</h2>
+  <!-- TRÊS MARCOS -->
+  <section class="section" id="marcos">
+    <p class="section-eyebrow" data-en="Journey">Trajetória</p>
+    <h2 class="section-title" data-en="Three milestones">Três marcos</h2>
+    <ol class="milestones">
+      <li>
+        <span class="ms-year">2023–2025</span>
+        <h3 data-en="SENAI Paulínia — technical training">SENAI Paulínia — formação técnica</h3>
+        <p data-en="Database Programming (120h), Python, Power BI, AI-900 and Microsoft Office Specialist.">Programação em Banco de Dados (120h), Python, Power BI, AI-900 e Microsoft Office Specialist.</p>
+      </li>
+      <li>
+        <span class="ms-year">2025–2026</span>
+        <h3 data-en="ArcTest — Apprentice">ArcTest — Jovem Aprendiz</h3>
+        <p data-en="Restructured 20 years of historical files; new organization process: +200% query efficiency.">Reestruturei 20 anos de arquivos históricos; novo processo de organização: +200% na eficiência de consulta.</p>
+      </li>
+      <li>
+        <span class="ms-year" data-en="2026 – present">2026 – atual</span>
+        <h3 data-en="AgRoss — Development Intern">AgRoss — Estagiário de Desenvolvimento</h3>
+        <p data-en="Internal systems in PL/SQL, SQL and web interfaces; AI in a self-service channel.">Sistemas internos em PL/SQL, SQL e interfaces web; IA em um canal de autoatendimento.</p>
+      </li>
+    </ol>
+    <p class="section-more"><a class="card-link" href="trajetoria.html" data-en="Full journey →">Trajetória completa →</a></p>
+  </section>
 
-    <div class="cards explore-grid">
-      <a href="sobre.html" class="card explore-card">
-        <div class="card-top"><h3 data-en="About">Sobre</h3></div>
-        <p class="card-problem" data-en="Who I am and what I focus on today.">Quem eu sou e no que atuo hoje.</p>
-        <span class="card-link" data-en="Read →">Ler →</span>
-      </a>
-      <a href="trajetoria.html" class="card explore-card">
-        <div class="card-top"><h3 data-en="Journey">Trajetória</h3></div>
-        <p class="card-problem" data-en="From 2022 to today, professional and personal milestones.">De 2022 até hoje, marcos profissionais e pessoais.</p>
-        <span class="card-link" data-en="Read →">Ler →</span>
-      </a>
-      <a href="projetos.html" class="card explore-card">
-        <div class="card-top"><h3 data-en="Projects">Projetos</h3></div>
-        <p class="card-problem" data-en="What I've been building, with links to the code.">O que venho construindo, com link pro código.</p>
-        <span class="card-link" data-en="Read →">Ler →</span>
-      </a>
-      <a href="skills.html" class="card explore-card">
-        <div class="card-top"><h3 data-en="Qualifications">Qualificações</h3></div>
-        <p class="card-problem" data-en="Stack, tools, soft skills and certificates.">Stack, ferramentas, soft skills e certificados.</p>
-        <span class="card-link" data-en="Read →">Ler →</span>
-      </a>
-      <a href="contato.html" class="card explore-card">
-        <div class="card-top"><h3 data-en="Contact">Contato</h3></div>
-        <p class="card-problem" data-en="Email, phone and links, plus resume download.">E-mail, telefone e links, além do currículo.</p>
-        <span class="card-link" data-en="Read →">Ler →</span>
-      </a>
+  <!-- CHAMADA FINAL -->
+  <section class="section section-cta" id="contato-final">
+    <h2 class="section-title" data-en="Open to internships and software development">Aberto a estágio e desenvolvimento de software</h2>
+    <p class="section-note" data-en="Send me an email or download my resume.">Me escreva ou baixe o currículo.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:otavio.felix433@gmail.com" data-en="Send an email">Enviar e-mail</a>
+      <a class="btn btn-ghost" href="assets/curriculo-otavio-felix.pdf" download data-en="Resume (PDF)">Currículo (PDF)</a>
     </div>
   </section>
 
@@ -174,6 +194,7 @@
 
 <footer class="footer">
   <p>Otávio Felix da Silva · Paulínia, SP · <span id="year"></span></p>
+  <p class="footer-links"><a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener">GitHub</a><a href="contato.html" data-en="Contact">Contato</a></p>
 </footer>
 
 <script src="js/main.js"></script>

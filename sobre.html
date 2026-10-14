@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110d" media="(prefers-color-scheme: dark)">
 <title data-en="About — Otávio Felix da Silva">Sobre — Otávio Felix da Silva</title>
 <meta name="description" content="Sobre Otávio Felix da Silva: desenvolvimento full-stack, banco de dados e automação de processos." data-en-content="About Otávio Felix da Silva: full-stack development, databases and process automation.">
 <!-- Open Graph / preview ao colar o link (URLs absolutas: exigência do LinkedIn/WhatsApp) -->
@@ -31,7 +34,7 @@
     <a href="index.html" class="nav-logo" aria-label="Otávio Felix — início">ofs<span class="dot">.</span></a>
     <nav class="nav-links" id="nav-links">
       <a href="index.html" data-en="Home">Início</a>
-      <a href="sobre.html" class="active" data-en="About">Sobre</a>
+      <a href="sobre.html" class="active" aria-current="page" data-en="About">Sobre</a>
       <a href="trajetoria.html" data-en="Journey">Trajetória</a>
       <a href="projetos.html" data-en="Projects">Projetos</a>
       <a href="skills.html" data-en="Qualifications">Qualificações</a>
@@ -60,7 +63,7 @@
       </div>
       <div class="about-intro-text">
         <p class="section-eyebrow" data-num="01" data-en="About">Sobre</p>
-        <h2 class="section-title" data-en="About me">Quem sou</h2>
+        <h1 class="section-title" data-en="About me">Quem sou</h1>
         <p class="about-lead" data-en="I work in software development in a corporate environment, focused on building and maintaining applications, databases and process automation. I have hands-on experience with PL/SQL and SQL in an Oracle environment, and with web development in JavaScript, HTML and CSS.">
           Atuo na área de desenvolvimento de software em ambiente corporativo, com foco em
           construção e manutenção de aplicações, banco de dados e automação de processos.
@@ -87,12 +90,15 @@
       <li><strong data-en="Languages">Idiomas</strong><span data-en="Portuguese (native) · English A2 · Spanish basic">Português (nativo) · Inglês A2 · Espanhol básico</span></li>
     </ul>
 
-    <p class="about-body about-base" data-en="My foundation includes data modeling, programming logic, data structures, object orientation, version control with Git and software engineering fundamentals. I'm an Information Systems student, with an ongoing interest in full-stack development, systems integration and process improvement through technology.">
+    <div class="about-base-row">
+      <p class="section-eyebrow" data-en="Foundation">Base técnica</p>
+      <p class="about-body" data-en="My foundation includes data modeling, programming logic, data structures, object orientation, version control with Git and software engineering fundamentals. I'm an Information Systems student, with an ongoing interest in full-stack development, systems integration and process improvement through technology.">
       Minha base inclui modelagem de dados, lógica de programação, estrutura de dados,
       orientação a objetos, versionamento com Git e fundamentos de engenharia de software.
       Sou estudante de Sistemas de Informação, com interesse contínuo em desenvolvimento
       full-stack, integração de sistemas e melhoria de processos através da tecnologia.
     </p>
+    </div>
   </section>
 
 
@@ -101,6 +107,7 @@
 
 <footer class="footer">
   <p>Otávio Felix da Silva · Paulínia, SP · <span id="year"></span></p>
+  <p class="footer-links"><a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener">GitHub</a><a href="contato.html" data-en="Contact">Contato</a></p>
 </footer>
 
 <script src="js/main.js"></script>

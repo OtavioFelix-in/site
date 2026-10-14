@@ -204,6 +204,24 @@
     });
   }
 
+  // ---- Trajetória: filtro Tudo / Profissional / Pessoal ----
+  var filterBtns = document.querySelectorAll(".tl-filter-btn");
+  if (filterBtns.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var f = btn.getAttribute("data-filter");
+        filterBtns.forEach(function (b) {
+          var on = b === btn;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        document.querySelectorAll(".tl-item").forEach(function (item) {
+          item.hidden = f !== "all" && !item.classList.contains(f);
+        });
+      });
+    });
+  }
+
   // ---- Ano no rodapé ----
   var yearEl = document.getElementById("year");
   if (yearEl) {

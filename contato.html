@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15110d" media="(prefers-color-scheme: dark)">
 <title data-en="Contact — Otávio Felix da Silva">Contato — Otávio Felix da Silva</title>
 <meta name="description" content="Fale com Otávio Felix da Silva: e-mail, telefone, LinkedIn, GitHub e download do currículo." data-en-content="Get in touch with Otávio Felix da Silva: email, phone, LinkedIn, GitHub and resume download.">
 <!-- Open Graph / preview ao colar o link (URLs absolutas: exigência do LinkedIn/WhatsApp) -->
@@ -35,7 +38,7 @@
       <a href="trajetoria.html" data-en="Journey">Trajetória</a>
       <a href="projetos.html" data-en="Projects">Projetos</a>
       <a href="skills.html" data-en="Qualifications">Qualificações</a>
-      <a href="contato.html" class="active" data-en="Contact">Contato</a>
+      <a href="contato.html" class="active" aria-current="page" data-en="Contact">Contato</a>
     </nav>
     <button id="lang-toggle" class="lang-toggle" aria-label="Switch language / Mudar idioma" title="PT / EN">
       <span id="lang-toggle-label">EN</span>
@@ -54,7 +57,7 @@
 
   <section class="section section-first section-contact" id="contato">
     <p class="section-eyebrow" data-num="06" data-en="Contact">Contato</p>
-    <h2 class="section-title" data-en="Let's talk">Vamos conversar</h2>
+    <h1 class="section-title" data-en="Let's talk">Vamos conversar</h1>
     <p class="section-lead" data-en="Open to internship and software development opportunities.">Aberto a oportunidades de estágio e desenvolvimento back-end.</p>
 
     <div class="contact-grid">
@@ -86,6 +89,7 @@
 
 <footer class="footer">
   <p>Otávio Felix da Silva · Paulínia, SP · <span id="year"></span></p>
+  <p class="footer-links"><a href="https://www.linkedin.com/in/otaviofelix" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OtavioFelix-in" target="_blank" rel="noopener">GitHub</a><a href="contato.html" data-en="Contact">Contato</a></p>
 </footer>
 
 <script src="js/main.js"></script>

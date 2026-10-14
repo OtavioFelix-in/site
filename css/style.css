@@ -1,27 +1,25 @@
 /* ============ Tokens ============ */
-/* Papel de cor (regra fixa, não decorativa):
-   Tema escuro (fundo preto) → acento é azul/ciano, ponto a ponto.
-   Tema claro (fundo branco) → acento vira marrom/âmbar, combinando com o branco.
-   --db (ciano) é reservado, nos dois temas, só para banco de dados:
-   tags de SQL/PL/SQL/Oracle e o ponto da timeline em itens de trabalho técnico.
-   --personal (roxo) = pontos pessoais da timeline. */
+/* Uma marca só nos dois temas: acento marrom/âmbar.
+   --db (azul-petróleo) é reservado, nos dois temas, a banco de dados: tags de SQL/PL/SQL/Oracle
+   e o ponto da timeline em trabalho técnico. --personal (oliva) = pontos pessoais da timeline.
+   Todo par de texto abaixo foi medido com scripts/paleta.py (>= 4,5:1). */
 :root {
-  --bg: #000000;
-  --bg-elev: #111111;
-  --bg-elev-2: #191919;
-  --border: #2a2a2a;
-  --text: #f2f0ee;
-  --text-dim: #a8a29a;
-  --text-dimmer: #6f6a63;
-  --accent: #22d3ee;
-  --accent-dim: #0e7490;
-  --accent-soft: rgba(34, 211, 238, 0.12);
-  --accent-ink: #06131a;
-  --db: #22d3ee;
-  --db-dim: #0e7490;
-  --db-soft: rgba(34, 211, 238, 0.12);
-  --work: #22d3ee;
-  --personal: #a78bfa;
+  --bg: #15110d;
+  --bg-elev: #1d1813;
+  --bg-elev-2: #251f19;
+  --border: #3a3128;
+  --text: #f4ede3;
+  --text-dim: #c3b6a6;
+  --text-dimmer: #a09282;
+  --accent: #e0a36a;
+  --accent-dim: #b57a3f;
+  --accent-soft: rgba(224, 163, 106, 0.14);
+  --accent-ink: #1a120a;
+  --db: #8fcfdc;
+  --db-dim: #5aa5b5;
+  --db-soft: rgba(143, 207, 220, 0.14);
+  --work: #e0a36a;
+  --personal: #b4bf86;
   --radius: 8px;
   --shadow: 0 10px 30px -12px rgba(0,0,0,0.6);
   --maxw: 1180px;
@@ -36,16 +34,16 @@
   --border: #e4ddd3;
   --text: #1c1712;
   --text-dim: #55493c;
-  --text-dimmer: #8c7d6b;
+  --text-dimmer: #6b5d4d;
   --accent: #9a5b28;
   --accent-dim: #7a4720;
   --accent-soft: rgba(154, 91, 40, 0.1);
   --accent-ink: #ffffff;
-  --db: #0891b2;
-  --db-dim: #0e7490;
-  --db-soft: rgba(8, 145, 178, 0.1);
+  --db: #0b6079;
+  --db-dim: #0b6079;
+  --db-soft: rgba(14, 116, 144, 0.1);
   --work: #9a5b28;
-  --personal: #6f7d4a;
+  --personal: #5f6d3b;
 }
 
 * { box-sizing: border-box; }
@@ -58,13 +56,13 @@ body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  opacity: 0;
-  transition: opacity 0.22s ease;
 }
-body.page-loaded { opacity: 1; }
-body.page-leaving { opacity: 0; }
+/* A transição de página só existe quando o JS roda (classe .js no <html>); sem JS o conteúdo aparece. */
+.js body { opacity: 0; transition: opacity 0.22s ease; }
+.js body.page-loaded { opacity: 1; }
+.js body.page-leaving { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
-  body { opacity: 1; transition: none; }
+  .js body { opacity: 1; transition: none; }
 }
 
 img { max-width: 100%; }
@@ -74,7 +72,7 @@ img { max-width: 100%; }
   left: -999px;
   top: 0;
   background: var(--accent);
-  color: #06131a;
+  color: var(--accent-ink);
   padding: 10px 16px;
   z-index: 200;
   border-radius: 0 0 8px 0;
@@ -195,23 +193,7 @@ img { max-width: 100%; }
   position: relative;
   overflow: hidden;
 }
-/* Arte do fundo: coluna à direita, some suave pra esquerda */
-.hero-art {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  /* ocupa só a sobra lateral ao lado do conteúdo; some quando não cabe */
-  display: none;
-  width: min(calc((100vw - var(--maxw)) / 2 - 16px), 560px);
-  height: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
-  mask-image: linear-gradient(to right, transparent, #000 30%);
-}
 .hero-inner { position: relative; z-index: 1; }
-@media (min-width: 2000px) {
-  .hero-art { display: block; }
-}
 @media (min-width: 1600px) {
   :root { --maxw: 1280px; }
 }
@@ -284,19 +266,6 @@ img { max-width: 100%; }
   gap: 12px;
 }
 .hero-actions-center { justify-content: center; }
-
-.scroll-cue {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-dimmer);
-  animation: bob 2s ease-in-out infinite;
-}
-@keyframes bob {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 8px); }
-}
 
 /* ============ Buttons ============ */
 .btn {
@@ -447,18 +416,6 @@ img { max-width: 100%; }
 .about-facts span { color: var(--text); font-weight: 500; }
 
 /* ============ Timeline legend ============ */
-.tl-legend {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0 0;
-}
-.tl-legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-}
 .tl-legend-dot {
   display: inline-block;
   width: 10px;
@@ -783,41 +740,6 @@ a.card { text-decoration: none; color: inherit; }
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.cursor-blink { animation: blink 1.1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-.pulse-dot { animation: dotPulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-@keyframes dotPulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(2.2); opacity: .45; }
-}
-
-/* Faixa de tecnologias (loop infinito) */
-.marquee {
-  display: flex;
-  overflow: hidden;
-  border-block: 1px solid var(--border);
-  background: var(--bg-elev);
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-}
-.marquee-track {
-  display: flex;
-  flex-shrink: 0;
-  min-width: 100%;
-  justify-content: space-around;
-  animation: marquee 32s linear infinite;
-}
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track span {
-  padding: 16px 28px;
-  font-family: ui-monospace, Consolas, monospace;
-  font-size: 0.92rem;
-  color: var(--text-dim);
-  white-space: nowrap;
-}
-.marquee-track span::before { content: '/ '; color: var(--accent); }
-@keyframes marquee { to { transform: translateX(-100%); } }
-
 /* ============ Sobre (redesenhado) ============ */
 .about-intro {
   display: grid;
@@ -888,7 +810,6 @@ a.card { text-decoration: none; color: inherit; }
 .about .about-facts li.is-visible:hover { transform: translateX(6px); border-color: var(--accent-dim); border-left-color: var(--accent); }
 
 .about-body { color: var(--text-dim); font-size: 1.05rem; margin: 0; }
-.about-base { max-width: var(--maxw-text); margin-top: 40px; }
 
 
 /* Entradas laterais não podem gerar rolagem horizontal */
@@ -953,8 +874,137 @@ main { overflow-x: clip; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .scroll-cue, .hero-text > *,
-  .cursor-blink, .pulse-dot, .marquee-track { animation: none; }
+  .hero-text > * { animation: none; }
   .section-title::after { transition: none; transform: scaleX(1); }
   .section-eyebrow::after { transition: none; width: 36px; }
+}
+
+
+/* ============ Redesenho (2026-10-13) ============ */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+/* Ritmo vertical: 3 degraus claros (seção 88 / grupo 32 / item 16) */
+.section { padding-block: 60px; }
+.section-first { padding-top: 72px; }
+.section-more { margin: 32px 0 0; }
+.section-note { color: var(--text-dim); max-width: 52ch; margin: 0 0 28px; }
+
+/* Hero: nome com presença, faixa de fatos no lugar da seta de rolagem */
+.hero { min-height: 0; justify-content: flex-start; padding: 96px 24px 0; }
+/* mesma borda de texto das seções (max-width da seção menos o padding de 24px) e do cabeçalho */
+.nav-inner { max-width: var(--maxw); }
+.hero-inner, .hero-facts { max-width: calc(var(--maxw) - 48px); }
+.hero-inner { grid-template-columns: minmax(220px, 320px) 1fr; gap: 64px; }
+.hero-photo { border-radius: var(--radius); }
+.hero h1 { font-size: clamp(2.6rem, 5.4vw, 4.2rem); line-height: 1.04; letter-spacing: -0.02em; }
+.hero-role { font-size: 1.15rem; }
+.hero-pitch { max-width: 56ch; }
+.hero-facts {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(var(--maxw) - 48px);
+  margin: 72px auto 0;
+  padding: 28px 0 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  border-top: 1px solid var(--border);
+}
+.hero-facts dt {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dimmer);
+}
+.hero-facts dd { margin: 0; font-weight: 500; }
+
+/* Tags sobre tinta clara: o marrom de texto escurece um degrau para fechar 4,5:1 */
+[data-theme="light"] .card-tags span { color: var(--accent-dim); }
+[data-theme="light"] .card-tags.chips-db span { color: var(--db); }
+
+/* Tags de banco de dados: azul-petróleo (a regra .chips span, mais abaixo no arquivo, as deixava bege) */
+.chips.chips-db span, .chips.chips-db a { background: var(--db-soft); border-color: transparent; color: var(--db); }
+
+/* Projetos em destaque */
+.featured-grid { grid-template-columns: repeat(3, 1fr); }
+
+/* Vídeo ao lado do texto, na grade da página */
+.section-video { padding-bottom: 60px; }
+.video-row { display: grid; grid-template-columns: minmax(260px, 0.85fr) 1.6fr; gap: 56px; align-items: center; }
+.video-copy .section-title { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.video-embed { max-width: none; }
+
+/* Play no canto: no centro ele tampava o nome que está na capa do vídeo */
+.video-play-icon { top: auto; left: 24px; bottom: 28px; width: 56px; height: 56px; margin: 0; }
+.video-play-icon svg { width: 24px; height: 24px; }
+
+/* Três marcos */
+.milestones { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.milestones li { padding-top: 18px; border-top: 2px solid var(--accent); }
+.ms-year { display: block; margin-bottom: 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; color: var(--accent); }
+.milestones h3 { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; margin: 0 0 8px; }
+.milestones p { margin: 0; color: var(--text-dim); font-size: 0.95rem; }
+
+/* Chamada final */
+.section-cta { position: relative; }
+.section-cta::before { content: ""; position: absolute; top: 0; left: 24px; right: 24px; border-top: 1px solid var(--border); }
+.section-cta .hero-actions { margin-top: 8px; }
+
+/* Rodapé */
+.footer-links { display: flex; justify-content: center; gap: 20px; margin: 10px 0 0; }
+.footer-links a { color: var(--text-dim); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* Trajetória: filtros no lugar da legenda */
+.tl-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
+.tl-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-dim);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.tl-filter-btn:hover { border-color: var(--accent-dim); color: var(--text); }
+.tl-filter-btn.is-active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.tl-filter-btn.is-active .tl-legend-dot { background: var(--accent-ink); border-color: var(--accent-ink); }
+.tl-item[hidden] { display: none; }
+
+/* Sobre: a base técnica na grade, com rótulo */
+.about-base-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 220px) 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.about-base-row .section-eyebrow { margin: 4px 0 0; }
+.about-base-row .about-body { max-width: var(--maxw-text); }
+
+@media (max-width: 900px) {
+  .featured-grid, .milestones { grid-template-columns: 1fr; }
+  .video-row { grid-template-columns: 1fr; gap: 24px; }
+  .hero-facts { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; }
+  .about-base-row { grid-template-columns: 1fr; gap: 8px; }
+}
+@media (max-width: 760px) {
+  .hero { padding: 56px 20px 0; }
+  /* volta à coluna única (a regra de grade acima, mais abaixo no arquivo, a sobrescrevia) */
+  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+  .hero-actions { gap: 8px; }
+  .hero-actions .btn:not(.btn-icon) { padding: 10px 14px; }
+  .hero-facts { text-align: left; }
+  .section { padding-block: 48px; }
 }
