@@ -10,13 +10,13 @@
 
 <img src="assets/logo-ofs.svg" alt="OFS signature" width="84">
 
-# site-pessoal
+# site
 
 **Personal portfolio and living resume of Otávio Felix da Silva.**<br>Plain HTML, CSS and JavaScript. No framework, no build.
 
 <br>
 
-<a href="https://otaviofelix-in.github.io/site-pessoal/"><img src="https://img.shields.io/badge/view%20the%20site-otaviofelix--in.github.io%2Fsite--pessoal-9a5b28?style=for-the-badge&labelColor=15110d" alt="View the live site"></a>
+<a href="https://otaviofelix-in.github.io/site/"><img src="https://img.shields.io/badge/view%20the%20site-otaviofelix--in.github.io%2Fsite-9a5b28?style=for-the-badge&labelColor=15110d" alt="View the live site"></a>
 
 <br>
 <br>
@@ -26,7 +26,7 @@
 <br>
 <br>
 
-[Home](https://otaviofelix-in.github.io/site-pessoal/) &nbsp;·&nbsp; [About](https://otaviofelix-in.github.io/site-pessoal/sobre.html) &nbsp;·&nbsp; [Journey](https://otaviofelix-in.github.io/site-pessoal/trajetoria.html) &nbsp;·&nbsp; [Projects](https://otaviofelix-in.github.io/site-pessoal/projetos.html) &nbsp;·&nbsp; [Qualifications](https://otaviofelix-in.github.io/site-pessoal/skills.html) &nbsp;·&nbsp; [Contact](https://otaviofelix-in.github.io/site-pessoal/contato.html)
+[Home](https://otaviofelix-in.github.io/site/) &nbsp;·&nbsp; [About](https://otaviofelix-in.github.io/site/sobre.html) &nbsp;·&nbsp; [Journey](https://otaviofelix-in.github.io/site/trajetoria.html) &nbsp;·&nbsp; [Projects](https://otaviofelix-in.github.io/site/projetos.html) &nbsp;·&nbsp; [Qualifications](https://otaviofelix-in.github.io/site/skills.html) &nbsp;·&nbsp; [Contact](https://otaviofelix-in.github.io/site/contato.html)
 
 <br>
 
@@ -51,7 +51,7 @@ One link to paste into LinkedIn, the resume and GitHub: **who I am, what I've bu
 | **Home** | introduction, what I do now, featured projects, stack, a 30-second video and three journey milestones |
 | **About** | who I am, real numbers (archive restructured, reach, courses), education, languages and technical foundation |
 | **Journey** | timeline from 2022 to today, filterable between **professional** and **personal** milestones |
-| **Projects** | internal systems at AgRoss, an emergency-room system, Meu Bolso and MaduTasks, with links to the code |
+| **Projects** | internal systems at AgRoss, an emergency-room system, Meu Bolso and Studify, with links to the code |
 | **Qualifications** | stack by area and certificates, with institution, hours and the PDF of each one |
 | **Contact** | email, LinkedIn, GitHub and resume as PDF (Portuguese and English) |
 
@@ -82,7 +82,7 @@ One brand across both themes: beige and brown, with **one** accent. Hierarchy th
 ## Structure
 
 ```text
-site-pessoal/
+site/
 ├── index.html           home
 ├── sobre.html           about
 ├── trajetoria.html      journey
@@ -99,8 +99,8 @@ site-pessoal/
 There's no build and no dependencies. Any static server works:
 
 ```bash
-git clone https://github.com/OtavioFelix-in/site-pessoal.git
-cd site-pessoal
+git clone https://github.com/OtavioFelix-in/site.git
+cd site
 python -m http.server 8000
 # open http://localhost:8000
 ```

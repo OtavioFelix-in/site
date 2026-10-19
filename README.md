@@ -10,13 +10,13 @@
 
 <img src="assets/logo-ofs.svg" alt="Assinatura OFS" width="84">
 
-# site-pessoal
+# site
 
 **Portfólio e currículo vivo de Otávio Felix da Silva.**<br>HTML, CSS e JavaScript puros. Sem framework, sem build.
 
 <br>
 
-<a href="https://otaviofelix-in.github.io/site-pessoal/"><img src="https://img.shields.io/badge/ver%20o%20site-otaviofelix--in.github.io%2Fsite--pessoal-9a5b28?style=for-the-badge&labelColor=15110d" alt="Ver o site no ar"></a>
+<a href="https://otaviofelix-in.github.io/site/"><img src="https://img.shields.io/badge/ver%20o%20site-otaviofelix--in.github.io%2Fsite-9a5b28?style=for-the-badge&labelColor=15110d" alt="Ver o site no ar"></a>
 
 <br>
 <br>
@@ -26,7 +26,7 @@
 <br>
 <br>
 
-[Início](https://otaviofelix-in.github.io/site-pessoal/) &nbsp;·&nbsp; [Sobre](https://otaviofelix-in.github.io/site-pessoal/sobre.html) &nbsp;·&nbsp; [Trajetória](https://otaviofelix-in.github.io/site-pessoal/trajetoria.html) &nbsp;·&nbsp; [Projetos](https://otaviofelix-in.github.io/site-pessoal/projetos.html) &nbsp;·&nbsp; [Qualificações](https://otaviofelix-in.github.io/site-pessoal/skills.html) &nbsp;·&nbsp; [Contato](https://otaviofelix-in.github.io/site-pessoal/contato.html)
+[Início](https://otaviofelix-in.github.io/site/) &nbsp;·&nbsp; [Sobre](https://otaviofelix-in.github.io/site/sobre.html) &nbsp;·&nbsp; [Trajetória](https://otaviofelix-in.github.io/site/trajetoria.html) &nbsp;·&nbsp; [Projetos](https://otaviofelix-in.github.io/site/projetos.html) &nbsp;·&nbsp; [Qualificações](https://otaviofelix-in.github.io/site/skills.html) &nbsp;·&nbsp; [Contato](https://otaviofelix-in.github.io/site/contato.html)
 
 <br>
 
@@ -49,7 +49,7 @@ Um link só para colar no LinkedIn, no currículo e no GitHub: **quem eu sou, o 
 | **Início** | apresentação, o que faço agora, projetos em destaque, stack, vídeo de 30 segundos e três marcos da trajetória |
 | **Sobre** | quem sou, números reais (arquivo reestruturado, alcance, cursos), formação, idiomas e base técnica |
 | **Trajetória** | linha do tempo de 2022 até hoje, com filtro entre marcos **profissionais** e **pessoais** |
-| **Projetos** | sistemas internos na AgRoss, sistema de pronto socorro, Meu Bolso e MaduTasks, com link para o código |
+| **Projetos** | sistemas internos na AgRoss, sistema de pronto socorro, Meu Bolso e Studify, com link para o código |
 | **Qualificações** | stack por área e certificados, com instituição, carga horária e o PDF de cada um |
 | **Contato** | e-mail, LinkedIn, GitHub e currículo em PDF (português e inglês) |
 
@@ -80,7 +80,7 @@ Uma marca só, nos dois temas: bege e marrom, com **um** acento. Hierarquia por 
 ## Estrutura
 
 ```text
-site-pessoal/
+site/
 ├── index.html           início
 ├── sobre.html
 ├── trajetoria.html
@@ -97,8 +97,8 @@ site-pessoal/
 Não há build nem dependências. Qualquer servidor estático serve:
 
 ```bash
-git clone https://github.com/OtavioFelix-in/site-pessoal.git
-cd site-pessoal
+git clone https://github.com/OtavioFelix-in/site.git
+cd site
 python -m http.server 8000
 # abra http://localhost:8000
 ```
