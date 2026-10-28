@@ -164,30 +164,6 @@
     });
   }
 
-  // ---- Vídeo: o iframe do YouTube só carrega no clique ----
-  document.querySelectorAll(".video-embed[data-yt]").forEach(function (box) {
-    var btn = box.querySelector(".video-play");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      // Aberto direto do disco (file://) o YouTube recusa o embed (erro 153):
-      // sem origem http(s) ele não identifica o site. Nesse caso abre no YouTube.
-      if (location.protocol === "file:") {
-        window.open("https://www.youtube.com/watch?v=" + box.getAttribute("data-yt"), "_blank", "noopener");
-        return;
-      }
-      var iframe = document.createElement("iframe");
-      iframe.referrerPolicy = "strict-origin-when-cross-origin";
-      iframe.src =
-        "https://www.youtube-nocookie.com/embed/" +
-        box.getAttribute("data-yt") +
-        "?autoplay=1&rel=0&modestbranding=1";
-      iframe.title = "Apresentação — Otávio Felix da Silva";
-      iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
-      iframe.allowFullscreen = true;
-      box.replaceChildren(iframe);
-    });
-  });
-
   // ---- Telefone: só aparece no clique (evita raspagem por robôs de spam) ----
   var phone = document.getElementById("phone-reveal");
   if (phone) {
@@ -232,23 +208,7 @@
   var revealTargets = document.querySelectorAll(
     ".section, .tl-item, .card, .contact-item, .stat, .about-facts li, .about-body, .about-portrait, .about-intro-text, .skill-group"
   );
-  revealTargets.forEach(function (el) {
-    el.classList.add("reveal");
-    // escalonamento: irmãos do mesmo tipo entram um depois do outro
-    var idx = 0, sib = el.previousElementSibling;
-    while (sib && idx < 6) {
-      if (sib.classList.contains("reveal")) idx++;
-      sib = sib.previousElementSibling;
-    }
-    if (idx) el.style.setProperty("--d", idx * 90 + "ms");
-  });
-  // entradas laterais na seção Sobre
-  [".about-portrait"].forEach(function (sel) {
-    document.querySelectorAll(sel).forEach(function (el) { el.classList.add("reveal-left"); });
-  });
-  [".about-intro-text"].forEach(function (sel) {
-    document.querySelectorAll(sel).forEach(function (el) { el.classList.add("reveal-right"); });
-  });
+  // O conteúdo fica visível desde o início; o observer só dispara os contadores e os traços dos títulos.
 
 
   // ---- Contadores que sobem até o valor ----
@@ -291,23 +251,5 @@
       el.classList.add("is-visible");
       el.querySelectorAll("[data-count]").forEach(countUp);
     });
-  }
-
-  // ---- Barra de progresso de leitura ----
-  var navEl = document.getElementById("nav");
-  if (navEl) {
-    var bar = document.createElement("div");
-    bar.className = "scroll-progress";
-    navEl.appendChild(bar);
-    var ticking = false;
-    var updateBar = function () {
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      bar.style.transform = "scaleX(" + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ")";
-      ticking = false;
-    };
-    window.addEventListener("scroll", function () {
-      if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
-    }, { passive: true });
-    updateBar();
   }
 })();

@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15110d" media="(prefers-color-scheme: dark)">
 <title data-en="Projects — Otávio Felix da Silva">Projetos — Otávio Felix da Silva</title>
-<meta name="description" content="Projetos de Otávio Felix da Silva: sistemas internos em PL/SQL e Oracle, sistema de pronto socorro, Meu Bolso e Studify, com código no GitHub." data-en-content="Projects by Otávio Felix da Silva: internal systems, an emergency-room system, Meu Bolso and Studify, with code on GitHub.">
+<meta name="description" content="Projetos de Otávio Felix da Silva: sistemas na AgRoss, sistema de pronto socorro, Meu Bolso, Studify, OffPilot e SCPTI, com código no GitHub." data-en-content="Projects by Otávio Felix da Silva: systems at AgRoss, an emergency-room system, Meu Bolso, Studify, OffPilot and SCPTI, with code on GitHub.">
 <!-- Open Graph / preview ao colar o link (URLs absolutas: exigência do LinkedIn/WhatsApp) -->
 <meta property="og:site_name" content="Otávio Felix da Silva">
 <meta property="og:title" content="Projetos — Otávio Felix da Silva">
@@ -38,8 +38,6 @@
     <a href="index.html" class="nav-logo" aria-label="Otávio Felix — início"><span class="nav-logo-mark" aria-hidden="true"></span></a>
     <nav class="nav-links" id="nav-links">
       <a href="index.html" data-en="Home">Início</a>
-      <a href="sobre.html" data-en="About">Sobre</a>
-      <a href="trajetoria.html" data-en="Journey">Trajetória</a>
       <a href="projetos.html" class="active" aria-current="page" data-en="Projects">Projetos</a>
       <a href="skills.html" data-en="Qualifications">Qualificações</a>
       <a href="contato.html" data-en="Contact">Contato</a>
@@ -63,43 +61,40 @@
     <p class="section-eyebrow" data-num="03" data-en="Projects">Projetos</p>
     <h1 class="section-title" data-en="What I've been building">O que venho construindo</h1>
 
-    <div class="cards">
-      <article class="card">
+    <h2 class="project-group" data-en="At work">No trabalho</h2>
+    <div class="cards cards-wide">
+      <article class="card card-wide">
         <div class="card-top">
           <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
             <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
             <ellipse cx="32" cy="20" rx="14" ry="6" fill="none" stroke="var(--db)" stroke-width="3"/><path d="M18 20v12c0 3.3 6.3 6 14 6s14-2.7 14-6V20M18 32v12c0 3.3 6.3 6 14 6s14-2.7 14-6V32" fill="none" stroke="var(--db)" stroke-width="3" stroke-linecap="round"/>
           </svg>
-          <h3 data-en="Internal systems — AgRoss">Sistemas internos — AgRoss</h3>
+          <h3 data-en="AgRoss — ERP, AI and BI">AgRoss — ERP, IA e BI</h3>
           <div class="card-tags chips-db">
-            <span>PL/SQL</span><span>Oracle</span><span>SQL</span><span>JavaScript</span>
+            <span>PL/SQL</span><span>Oracle</span><span>PHP</span><span>JavaScript</span>
           </div>
         </div>
-        <p class="card-problem" data-en-html="<strong>Context:</strong> internal systems for an agricultural-inputs company, on top of an Oracle database."><strong>Contexto:</strong> sistemas internos de uma empresa de insumos agropecuários, sobre banco Oracle.</p>
-        <p class="card-solution" data-en-html="<strong>What I do:</strong> I build and maintain screens and routines in PL/SQL, SQL and JavaScript, and I'm part of bringing AI into a self-service channel."><strong>O que faço:</strong> desenvolvo e mantenho telas e rotinas em PL/SQL, SQL e JavaScript e participo da introdução de IA em um canal de autoatendimento.</p>
+        <p class="card-problem" data-en-html="<strong>Context:</strong> an agricultural-inputs wholesaler moving to a new ERP and serving customers through AI on WhatsApp, on top of an Oracle database."><strong>Contexto:</strong> atacadista de insumos agropecuários que está migrando para um novo ERP e atende os clientes com IA pelo WhatsApp, sobre banco Oracle.</p>
+        <ul class="card-list">
+          <li data-en="I'm responsible for moving the finance area to the new ERP, with banking-API automations that run without human input.">Sou responsável por levar o financeiro para o novo ERP, com automações por APIs bancárias que rodam sem intervenção humana.</li>
+          <li data-en="I help migrate the logistics system, one of the core parts of the operation.">Ajudo na migração do sistema de logística, um dos pontos centrais da operação.</li>
+          <li data-en="I help build AgRoss Express, the AI that serves customers on WhatsApp.">Ajudo no desenvolvimento do AgRoss Express, a IA que atende os clientes pelo WhatsApp.</li>
+          <li data-en="I created the system that monitors that AI in real time: conversations, quotes, errors, costs and revenue.">Criei o sistema que monitora essa IA em tempo real: conversas, orçamentos, erros, gastos e faturamento.</li>
+          <li data-en="I took part in CRM AgRoss and build web dashboards for sales and finance.">Participei do CRM AgRoss e faço painéis web de vendas e financeiro.</li>
+        </ul>
         <span class="card-note" data-en="Internal code — not public">Código interno — não é público</span>
       </article>
-      <article class="card">
-        <div class="card-top">
-          <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
-            <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
-            <rect x="16" y="16" width="32" height="32" rx="6" fill="none" stroke="var(--accent)" stroke-width="3"/><path d="M32 24v16M24 32h16" stroke="var(--accent)" stroke-width="3.4" stroke-linecap="round"/>
-          </svg>
-          <h3 data-en="Emergency Room Care System">Atendimentos de Pronto Socorro</h3>
-          <div class="card-tags">
-            <span data-en="Web system">Sistema web</span><span>MySQL</span><span>PUC-Campinas</span>
-          </div>
-        </div>
-        <p class="card-problem" data-en-html="<strong>Problem:</strong> controlling the care flow of an emergency room, from the patient's arrival to medical discharge."><strong>Problema:</strong> controlar o fluxo de atendimento de um pronto socorro, da chegada do paciente à alta médica.</p>
-        <p class="card-solution" data-en-html="<strong>Solution:</strong> three interfaces (reception, triage, doctor) with profile-based login, risk classification by the Manchester Protocol and a 5-table relational model."><strong>Solução:</strong> três interfaces (recepção, triagem e médico) com login por perfil, classificação de risco pelo Protocolo de Manchester e modelo relacional de 5 tabelas.</p>
-        <div class="card-links"><a href="https://github.com/OtavioFelix-in/Projeto-Integrador2" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a></div>
-      </article>
+    </div>
+
+    <h2 class="project-group" data-en="Personal projects">Projetos próprios</h2>
+    <div class="cards">
       <article class="card">
         <div class="card-top">
           <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
             <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
             <path d="M17 24h28a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H19a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4h22" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M49 31h-7a5 5 0 0 0 0 10h7" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/><circle cx="42.5" cy="36" r="1.8" fill="var(--accent)"/>
           </svg>
+          <span class="card-status is-live" data-en="Launched">Lançado</span>
           <h3>Meu Bolso</h3>
           <div class="card-tags">
             <span>React Native</span><span>Expo</span><span>SQLite</span>
@@ -113,8 +108,25 @@
         <div class="card-top">
           <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
             <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
+            <path d="M24 22l-10 10 10 10M40 22l10 10-10 10" fill="none" stroke="var(--accent)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 18l-6 28" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span class="card-status is-live" data-en="Open source">Código aberto</span>
+          <h3>OffPilot</h3>
+          <div class="card-tags">
+            <span>Claude Code</span><span>Plugin</span>
+          </div>
+        </div>
+        <p class="card-problem" data-en-html="<strong>Problem:</strong> systems built by Claude Code tend to come out looking the same, because it starts building before thinking."><strong>Problema:</strong> sistemas feitos pelo Claude Code costumam sair todos com a mesma cara, porque ele começa a fazer antes de pensar.</p>
+        <p class="card-solution" data-en-html="<strong>Solution:</strong> a plugin that makes it ask what matters, propose a plan and a visual tied to the product's field, and review its own work before delivering."><strong>Solução:</strong> plugin que faz ele perguntar o que importa, propor um plano e um visual ligado ao ramo do produto e revisar o próprio trabalho antes de entregar.</p>
+        <div class="card-links"><a href="https://github.com/OtavioFelix-in/OffPilot" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a></div>
+      </article>
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
             <rect x="25" y="13" width="14" height="5" rx="1.5" fill="var(--accent)"/><path d="M21 21h22v10c0 9-6 14-11 22-5-8-11-13-11-22z" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="33" r="2.6" fill="var(--accent)"/><path d="M32 36v13" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"/>
           </svg>
+          <span class="card-status" data-en="In development">Em desenvolvimento</span>
           <h3>Studify</h3>
           <div class="card-tags">
             <span>React Native</span><span>Expo</span><span>SQLite</span>
@@ -123,6 +135,42 @@
         <p class="card-problem" data-en-html="<strong>Problem:</strong> organizing a study routine with deadlines, subjects and reminders."><strong>Problema:</strong> organizar uma rotina de estudos com prazos, matérias e lembretes.</p>
         <p class="card-solution" data-en-html="<strong>Solution:</strong> an Android study planner with tasks, calendar, Pomodoro, reminders and a home-screen widget — offline-first, with optional Supabase sync."><strong>Solução:</strong> agenda de estudos para Android com tarefas, calendário, Pomodoro, lembretes e widget na tela inicial — offline-first, com sincronização opcional via Supabase.</p>
         <div class="card-links"><a href="https://github.com/OtavioFelix-in/Studify" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a><a href="https://otaviofelix-in.github.io/Studify-Site/" target="_blank" rel="noopener" class="card-link" data-en="Visit the site →">Ver o site →</a></div>
+      </article>
+    </div>
+
+    <h2 class="project-group" data-en="At university">Na faculdade</h2>
+    <div class="cards cards-two">
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
+            <rect x="16" y="18" width="32" height="28" rx="4" fill="none" stroke="var(--accent)" stroke-width="3"/><path d="M22 26l5 4-5 4M31 36h10" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="card-status" data-en="Integrator Project 1">Projeto Integrador 1</span>
+          <h3 data-en="SCPTI — IT Request Control System">SCPTI — Controle de Pedidos de TI</h3>
+          <div class="card-tags">
+            <span>Python</span><span>MySQL</span>
+          </div>
+        </div>
+        <p class="card-problem" data-en-html="<strong>Problem:</strong> in a company IT help desk, requests arrive without a defined priority or the right technician."><strong>Problema:</strong> numa central de suporte de TI, os chamados chegam sem prioridade definida e sem o técnico certo.</p>
+        <p class="card-solution" data-en-html="<strong>Solution:</strong> a Python system with MySQL that calculates priority from an impact × difficulty matrix and routes each ticket to a matching technician. My first team project at university."><strong>Solução:</strong> sistema em Python com MySQL que calcula a prioridade por uma matriz de impacto × dificuldade e encaminha o chamado para o técnico compatível. Meu primeiro trabalho em equipe na faculdade.</p>
+        <div class="card-links"><a href="https://github.com/maximusdn/SCPTI-Sistema-de-Controle-de-Pedidos-de-TI" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a></div>
+      </article>
+      <article class="card">
+        <div class="card-top">
+          <svg class="card-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="1" y="1" width="62" height="62" rx="14" fill="var(--accent-soft)"/>
+            <rect x="16" y="16" width="32" height="32" rx="6" fill="none" stroke="var(--accent)" stroke-width="3"/><path d="M32 24v16M24 32h16" stroke="var(--accent)" stroke-width="3.4" stroke-linecap="round"/>
+          </svg>
+          <span class="card-status" data-en="Integrator Project 2">Projeto Integrador 2</span>
+          <h3 data-en="Emergency Room Care System">Atendimentos de Pronto Socorro</h3>
+          <div class="card-tags">
+            <span data-en="Web system">Sistema web</span><span>MySQL</span>
+          </div>
+        </div>
+        <p class="card-problem" data-en-html="<strong>Problem:</strong> controlling the care flow of an emergency room, from the patient's arrival to medical discharge."><strong>Problema:</strong> controlar o fluxo de atendimento de um pronto socorro, da chegada do paciente à alta médica.</p>
+        <p class="card-solution" data-en-html="<strong>Solution:</strong> three interfaces (reception, triage, doctor) with profile-based login, risk classification by the Manchester Protocol and a 5-table relational model."><strong>Solução:</strong> três interfaces (recepção, triagem e médico) com login por perfil, classificação de risco pelo Protocolo de Manchester e modelo relacional de 5 tabelas.</p>
+        <div class="card-links"><a href="https://github.com/OtavioFelix-in/Projeto-Integrador2" target="_blank" rel="noopener" class="card-link" data-en="View on GitHub →">Ver no GitHub →</a></div>
       </article>
     </div>
   </section>
