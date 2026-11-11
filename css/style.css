@@ -898,7 +898,7 @@ main { overflow-x: clip; }
 .chips.chips-db span, .chips.chips-db a { background: var(--db-soft); border-color: transparent; color: var(--db); }
 
 /* Projetos em destaque */
-.featured-grid { grid-template-columns: repeat(3, 1fr); }
+.featured-grid { grid-template-columns: repeat(2, 1fr); }
 
 /* Três marcos */
 .milestones { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
